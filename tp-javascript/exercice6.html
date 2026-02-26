@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <title>Exercice 6 - Nommage et débogage</title>
+    <style>
+        .retour {
+            display: inline-block;
+            margin: 20px 0;
+            padding: 10px 20px;
+            background: #9a9ca7;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-family: Arial, sans-serif;
+        }
+        .retour:hover {
+            background: #764ba2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exercice 6 — Nommage et débogage</h1>
+    <p>Ouvrez la console  pour voir les résultats.</p>
+
+    <a href="index.html" class="retour">⬅️ Retour au catalogue</a>
+
+    <script>
+        
+        let premierPrix = 100;          
+        let deuxiemePrix = 80;         
+        let prixMinimum = 50;           
+        let valeur = 200;                 
+        let prixMaximum = 300;            
+        
+        
+        let prixMoyen = (premierPrix + deuxiemePrix + prixMinimum + valeur + prixMaximum) / 5;
+
+        
+        console.log("Prix moyen : " + prixMoyen);
+        console.log("Le prix minimum est : " + prixMinimum);
+        console.log("Le prix maximum est : " + prixMaximum); // Affichage supplémentaire demandé
+    </script>
+</body>
+</html>

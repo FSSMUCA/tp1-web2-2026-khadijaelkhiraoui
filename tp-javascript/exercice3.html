@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <title>TP JavaScript - Exercice 3</title>
+    <style>
+        .retour {
+            display: inline-block;
+            margin: 20px 0;
+            padding: 10px 20px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-family: Arial, sans-serif;
+        }
+        .retour:hover {
+            background: #764ba2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exercice 3 — Constantes et calcul de TVA</h1>
+    
+    <a href="index.html" class="retour">⬅️ Retour au catalogue</a>
+    
+    <script>
+        
+        const TAUX_TVA = 0.20; 
+        
+      
+        let prixHT = 150;  
+        
+        
+        let montantTVA = TAUX_TVA * prixHT;
+        let prixTTC = prixHT + montantTVA;
+        
+        // 4. Affichage avec template literals
+        console.log(`Prix HT : ${prixHT} € | TVA (20%) : ${montantTVA} € | Prix TTC : ${prixTTC} €`);
+        
+        // 5. Tentative de modification de la constante (décommentez pour tester l'erreur)
+        // TAUX_TVA = 0.25;  // Cela provoquera une erreur : "Assignment to constant variable"
+        
+       
+        console.log("\n--- Test avec un autre prix ---");
+        prixHT = 200;
+        montantTVA = TAUX_TVA * prixHT;
+        prixTTC = prixHT + montantTVA;
+        console.log(`Prix HT : ${prixHT} € | TVA (20%) : ${montantTVA} € | Prix TTC : ${prixTTC} €`);
+        
+        // Explication
+        console.log("\n--- Note ---");
+        console.log("Si on essaie de modifier TAUX_TVA, on obtient l'erreur :");
+        console.log("Uncaught TypeError: Assignment to constant variable.");
+    </script>
+</body>
+</html>
