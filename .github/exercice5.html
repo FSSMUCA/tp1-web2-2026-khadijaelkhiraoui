@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <title>Exercice 5 - Modification du contenu</title>
+    <style>
+        .retour {
+            display: inline-block;
+            margin: 20px 0;
+            padding: 10px 20px;
+            background: #a8abbb;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-family: Arial, sans-serif;
+        }
+        .retour:hover {
+            background: #764ba2;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ma fiche de présentation</h1>
+    <p id="nomComplet">...</p>
+    <p id="age">...</p>
+    <p id="ville">...</p>
+    <p id="presentation">...</p>
+
+    <a href="index.html" class="retour">⬅️ Retour au catalogue</a>
+
+    <script>
+        // Déclaration des variables avec vos informations
+        let prenom = "Khadija";        
+        let nom = "El khiraoui";   
+        let age = 19;                
+        let ville = "Marrakech";   
+
+        // 1. Afficher "Prénom NOM" dans le paragraphe nomComplet
+        document.getElementById("nomComplet").innerHTML = prenom + " " + nom.toUpperCase();
+
+        // 2. Afficher l'âge
+        document.getElementById("age").innerHTML = "Âge : " + age + " ans";
+
+        // 3. Afficher la ville
+        document.getElementById("ville").innerHTML = "Ville : " + ville;
+
+        // 4. Afficher une phrase complète dans le paragraphe presentation
+        document.getElementById("presentation").innerHTML = `Je m'appelle ${prenom} ${nom}, j'ai ${age} ans et j'habite à ${ville}.`;
+
+        // 5. Modifier le titre de la page
+        document.title = "Fiche de " + prenom;
+
+        
+
+    </script>
+</body>
+</html>

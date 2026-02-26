@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <title>TP JavaScript - Exercice 4</title>
+    <style>
+        .retour {
+            display: inline-block;
+            margin: 20px 0;
+            padding: 10px 20px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-family: Arial, sans-serif;
+        }
+        .retour:hover {
+            background: #764ba2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exercice 4 — Interaction utilisateur</h1>
+    
+    <a href="index.html" class="retour">⬅️ Retour au catalogue</a>
+    
+    <script>
+        // 1. Demander le prénom
+        let prenom = prompt("Quel est votre prénom ?");
+        
+        // Vérifier si l'utilisateur a cliqué sur "Annuler"
+        if (prenom === null) {
+            alert("Vous avez annulé. Rechargez la page pour réessayer.");
+        } else {
+            // 2. Demander l'âge
+            let age = prompt("Quel est votre âge ?");
+            
+            if (age === null) {
+                alert("Vous avez annulé. Rechargez la page pour réessayer.");
+            } else {
+                // 3. Convertir l'âge en nombre
+                age = Number(age);
+                
+                // Vérifier si c'est un nombre valide
+                if (isNaN(age) || age <= 0) {
+                    alert("Âge invalide ! Veuillez entrer un nombre positif.");
+                } else {
+                    // 4. Calculer l'année de naissance approximative
+                    let anneeNaissance = 2025 - age;
+                    
+                    // 5. Afficher une alerte
+                    alert(`Bonjour ${prenom} ! Vous êtes né(e) vers ${anneeNaissance}.`);
+                    
+                    // 6. Demander confirmation pour afficher dans la console
+                    let afficherConsole = confirm("Voulez-vous afficher vos informations dans la console ?");
+                    
+                    // 7. Si OK, afficher dans la console
+                    if (afficherConsole === true) {
+                        console.log("--- Informations de l'utilisateur ---");
+                        console.log("Prénom :", prenom);
+                        console.log("Âge :", age);
+                        console.log("Année de naissance :", anneeNaissance);
+                        console.log("--------------------------------------");
+                    } else {
+                        console.log("L'utilisateur a refusé d'afficher ses informations.");
+                    }
+                }
+            }
+        }
+        
+        console.log("Programme terminé !");
+    </script>
+</body>
+</html>
