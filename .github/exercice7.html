@@ -38,33 +38,33 @@
     <a href="index.html" class="retour">⬅️ Retour au catalogue</a>
 
     <script>
-        // 1. Constante PI
+        
         const PI = Math.PI;
 
-        // 2. Demander le rayon à l'utilisateur
+     
         let rayonSaisi = prompt("Veuillez entrer le rayon du cercle (en cm) :");
 
-        // Vérifier si l'utilisateur n'a pas annulé
+       
         if (rayonSaisi === null) {
             alert("Opération annulée. Rechargez la page pour réessayer.");
         } else {
-            // Convertir la saisie en nombre
+            
             let rayon = Number(rayonSaisi);
 
-            // Vérifier si c'est un nombre valide et positif
+            
             if (isNaN(rayon) || rayon <= 0) {
                 alert("Rayon invalide ! Veuillez entrer un nombre positif.");
             } else {
-                // 3. Calculs
+                
                 let perimetre = 2 * PI * rayon;
                 let surface = PI * rayon * rayon;
 
-                // 4. Affichage dans les div avec arrondi à 2 décimales
+               
                 document.getElementById("rayon").innerHTML = `Rayon : ${rayon} cm`;
                 document.getElementById("perimetre").innerHTML = `Périmètre : ${perimetre.toFixed(2)} cm`;
                 document.getElementById("surface").innerHTML = `Surface : ${surface.toFixed(2)} cm²`;
 
-                // Affichage supplémentaire dans la console (optionnel)
+                
                 console.log(`Rayon saisi : ${rayon} cm`);
                 console.log(`Périmètre : ${perimetre.toFixed(2)} cm`);
                 console.log(`Surface : ${surface.toFixed(2)} cm²`);

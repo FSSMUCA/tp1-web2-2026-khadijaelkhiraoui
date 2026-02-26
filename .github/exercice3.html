@@ -25,13 +25,13 @@
     <a href="index.html" class="retour">⬅️ Retour au catalogue</a>
     
     <script>
-        // 1. Constante pour la TVA (SCREAMING_SNAKE_CASE)
-        const TAUX_TVA = 0.20;  // TVA à 20%
         
-        // 2. Variable prix HT
-        let prixHT = 150;  // Vous pouvez modifier cette valeur
+        const TAUX_TVA = 0.20; 
         
-        // 3. Calcul du montant de TVA et du prix TTC
+      
+        let prixHT = 150;  
+        
+        
         let montantTVA = TAUX_TVA * prixHT;
         let prixTTC = prixHT + montantTVA;
         
@@ -41,7 +41,7 @@
         // 5. Tentative de modification de la constante (décommentez pour tester l'erreur)
         // TAUX_TVA = 0.25;  // Cela provoquera une erreur : "Assignment to constant variable"
         
-        // Exemple avec un autre prix HT
+       
         console.log("\n--- Test avec un autre prix ---");
         prixHT = 200;
         montantTVA = TAUX_TVA * prixHT;

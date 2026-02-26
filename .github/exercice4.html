@@ -25,36 +25,35 @@
     <a href="index.html" class="retour">⬅️ Retour au catalogue</a>
     
     <script>
-        // 1. Demander le prénom
+    
         let prenom = prompt("Quel est votre prénom ?");
         
-        // Vérifier si l'utilisateur a cliqué sur "Annuler"
+       
         if (prenom === null) {
             alert("Vous avez annulé. Rechargez la page pour réessayer.");
         } else {
-            // 2. Demander l'âge
+       
             let age = prompt("Quel est votre âge ?");
             
             if (age === null) {
                 alert("Vous avez annulé. Rechargez la page pour réessayer.");
             } else {
-                // 3. Convertir l'âge en nombre
+        
                 age = Number(age);
-                
-                // Vérifier si c'est un nombre valide
+               
                 if (isNaN(age) || age <= 0) {
                     alert("Âge invalide ! Veuillez entrer un nombre positif.");
                 } else {
-                    // 4. Calculer l'année de naissance approximative
+                    
                     let anneeNaissance = 2025 - age;
                     
-                    // 5. Afficher une alerte
+                    
                     alert(`Bonjour ${prenom} ! Vous êtes né(e) vers ${anneeNaissance}.`);
                     
-                    // 6. Demander confirmation pour afficher dans la console
+                 
                     let afficherConsole = confirm("Voulez-vous afficher vos informations dans la console ?");
                     
-                    // 7. Si OK, afficher dans la console
+                  
                     if (afficherConsole === true) {
                         console.log("--- Informations de l'utilisateur ---");
                         console.log("Prénom :", prenom);
